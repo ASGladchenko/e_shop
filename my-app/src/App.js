@@ -1,6 +1,6 @@
 import E_Shop from "./routes/E_Shop";
 
-import './main.scss'
+import './shared/styles/main.scss'
 
 function App() {
   return (

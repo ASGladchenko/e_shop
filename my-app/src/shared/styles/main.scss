@@ -1,0 +1,40 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap');
+@import "normalize.css";
+@import "svg-styles";
+
+$bodyColor: #f2f2f2;
+$mainColor: #fdfdfe;
+$secondColor: #00a819;
+$accentColor: #fdce01;
+$hoverColor: #00a819;
+
+$mainFont: 'Lato', sans-serif;
+
+* {
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    img{
+      transition: 0.33s;
+      &:hover{
+        transition: 0.33s;
+        transform: scale(1.11);
+      }
+    }
+  }
+}
+
+body {
+  background-color: $bodyColor;
+  min-height: 100vh;
+}
+
+.hover {
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+
