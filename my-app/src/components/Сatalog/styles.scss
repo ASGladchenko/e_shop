@@ -1,0 +1,47 @@
+@import "../../shared/styles/main";
+
+.catalog {
+  .product_card {
+    div {
+      padding: 3px;
+    }
+
+    border: 1px solid transparent;
+    transition: all 0.5s;
+
+    &:hover {
+      transition: all .6s;
+      box-shadow: 0 1rem 3rem rgba(39, 39, 39, .175) !important;
+      border-color: $secondColor;
+      position: relative;
+      z-index: 100;
+    }
+
+    .product_card__img {
+      max-width: 228px;
+      min-width: 150px;
+      max-height: 228px;
+      min-height: 150px;
+    }
+
+    button {
+      border: none;
+      transition: all 0.5s;
+
+      &:hover {
+        transition: all 0.5s;
+        color: black;
+        border: none;
+        background-color: $accentColor;
+      }
+    }
+  }
+}
+.catalog__footer{
+  button{
+    &:hover{
+      background-color: $accentColor;
+    }
+  }
+}
+

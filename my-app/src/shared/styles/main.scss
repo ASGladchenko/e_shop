@@ -6,7 +6,7 @@
 $bodyColor: #f2f2f2;
 $mainColor: #fdfdfe;
 $secondColor: #00a819;
-$accentColor: #fdce01;
+$accentColor: #e1c048;
 $hoverColor: #00a819;
 
 $mainFont: 'Lato', sans-serif;
@@ -19,6 +19,9 @@ $monserratFont:  Montserrat,sans-serif;
 }
 .bg-second{
   background-color: $secondColor;
+}
+.bg-accent{
+  background-color: $accentColor;
 }
 //Media require
 
