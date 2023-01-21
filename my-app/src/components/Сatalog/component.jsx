@@ -12,7 +12,6 @@ import {category} from "../../temporary_files/mocData";
 const Catalog = ({catalogName}) => {
     const navigate = useNavigate()
     const navigateProduct = (path) => navigate(path, {replace: true})
-    let x = 0;
     return (
         <Container>
             <Row className='justify-content-center'>
