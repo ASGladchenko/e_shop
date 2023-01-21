@@ -1,27 +1,15 @@
+import {Link} from "react-router-dom";
+
 import {Col, Container, Row} from "react-bootstrap";
 
 import Logo from "../../shared/Logo";
 import FooterOrder from "./FooterOrder";
 
-import './styles.scss'
 import {SvgSelector} from "../../helpers/SvgSelector/component";
 
-const mockData = [
-    {name: 'Category', id: 1},
-    {name: 'Category', id: 2},
-    {name: 'Category', id: 3},
-    {name: 'Category', id: 4},
-    {name: 'Category', id: 5},
-    {name: 'Category', id: 6},
-    {name: 'Category', id: 7},
-    {name: 'Category', id: 8},
-    {name: 'Category', id: 9},
-    {name: 'Category', id: 10},
-    {name: 'Category', id: 11},
-    {name: 'Category', id: 12},
-    {name: 'Category', id: 13},
+import './styles.scss'
 
-]
+import {category} from "../../temporary_files/mocData";
 
 const Footer = () => (
     <footer className='pt-4 pb-3 mt-4 lay-out flex-wrap'>
@@ -34,45 +22,47 @@ const Footer = () => (
                 </Col>
                 <Col sm={6} md={4} lg={6} className='d-flex justify-content-center mb-4 mb-md-0'>
                     <Col className='col-lg-8 d-none d-lg-block '>
-                        <h5 className='text-center'>Catalog</h5>
+                        <h5 className='text-center  '>Catalog</h5>
                         <Col className='d-flex flex-wrap  text-center'>
-                            {mockData.map(({name, id}) => (
-                                <p key={id} className="col-6 mb-1"><a href='/' className='hover'>{name}</a></p>))}
+                            {category.map(({name, id}) => (
+                                <Link to={`/catalog/${name.replaceAll(' ', '_').toLowerCase()}`} key={id} className="col-6 mb-1 hover"><p
+                                    className='mb-1'>{name}</p></Link>
+                            ))}
                         </Col>
                     </Col>
                     <Col lg={4} className='mt-lg-0 text-center '>
                         <h5>Company</h5>
                         <Col>
-                            <p className='mb-1 hover'><a href="/" className='hover'>Delivery and payment</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>To partners</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>Blog</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>About company</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>Public contract (offer)</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>Technical support</a></p>
-                            <p className='mb-1'><a href="/" className='hover'>Contacts</a></p>
+                            <Link to='/delivery_payment' className='hover'><p className='mb-1'>Delivery and payment</p>
+                            </Link>
+                            <Link to='/partners' className='hover'><p className='mb-1'>To partners</p></Link>
+                            <Link to='/blog' className='hover'><p className='mb-1'>Blog</p></Link>
+                            <Link to='/about_us' className='hover'><p className='mb-1'>About company</p></Link>
+                            <Link to='/contract' className='hover'><p className='mb-1'>Public contract (offer)</p>
+                            </Link>
+                            <Link to='/support' className='hover'><p className='mb-1'>Technical support</p></Link>
+                            <Link to='/contacts' className='hover'><p className='mb-1'>Contacts</p></Link>
                         </Col>
                     </Col>
                 </Col>
                 <Col className='col-md-4 col-lg-3 col-xl-2  mt-lg-0 social text-center'>
                     <h5 className='text-center mb-3'>Join Us</h5>
                     <Col className='d-flex justify-content-around'>
-                        {/*<SvgSelector selector='fb-join-us'/>*/}
-                        <a className='hover-icon'><img src="https://img.icons8.com/ios/30/000000/facebook-new.png"/></a>
-                        <a className='hover-icon'><img src="https://img.icons8.com/ios/30/000000/instagram-new--v1.png"/></a>
-                        <a className='hover-icon'><img src="https://img.icons8.com/ios/30/null/telegram.png"/></a>
+                        <Link className='hover-icon'><img alt='join_us_fb' src="https://img.icons8.com/ios/30/000000/facebook-new.png"/></Link>
+                        <Link className='hover-icon'><img alt='join_us_instagram'  src="https://img.icons8.com/ios/30/000000/instagram-new--v1.png"/></Link>
+                        <Link className='hover-icon'><img alt='join_us_telegram'  src="https://img.icons8.com/ios/30/null/telegram.png"/></Link>
                     </Col>
                 </Col>
                 <Row className='mt-4 justify-content-between align-items-center mx-auto'>
                     <Col xs={12} md={9} className='text-center text-md-start'>
-                        <p className='mb-0'>© 2023 - since Internet-shop Company Name - company mission</p>
+                        <p className='mb-0'>© 2023 - 2024. Internet-shop Company Name - company mission</p>
                     </Col>
-                    <Col xs={12} md={3} className='d-flex justify-content-around align-items-center justify-content-md-end' >
+                    <Col xs={12} md={3}
+                         className='d-flex justify-content-around align-items-center justify-content-md-end'>
                         <SvgSelector selector='master-card-secure'/>
-                        <SvgSelector selector={'verified-by-visa'}/>
+                        <SvgSelector selector='verified-by-visa'/>
                     </Col>
-
                 </Row>
-
             </Row>
         </Container>
     </footer>

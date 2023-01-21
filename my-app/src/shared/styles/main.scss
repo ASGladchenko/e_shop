@@ -10,6 +10,41 @@ $accentColor: #fdce01;
 $hoverColor: #00a819;
 
 $mainFont: 'Lato', sans-serif;
+$monserratFont:  Montserrat,sans-serif;
+
+//Background color
+
+.bg-main{
+  background-color: $mainColor;
+}
+.bg-second{
+  background-color: $secondColor;
+}
+//Media require
+
+.col-after360-6 {
+  @media screen and (max-width: 389.98px) {
+    width: 100%;
+  }
+  @media (min-width: 390px) and (max-width: 575.98px) {
+    width: 50%;
+  }
+}
+
+//Font size
+.fz-16{
+  font-size: 16px;
+}.fz-14{
+  font-size: 14px;
+}
+//Text color
+.text-grey{
+color: #8a8a8a;
+}
+//Fonts
+.monserrat{
+  font-family: $monserratFont;
+}
 
 * {
   a {
@@ -34,7 +69,11 @@ body {
 .hover {
   &:hover {
     color: $hoverColor;
+    svg{
+      fill: $hoverColor;
+    }
   }
+
 }
 
 

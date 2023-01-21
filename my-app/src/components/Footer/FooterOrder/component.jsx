@@ -1,5 +1,4 @@
 import './styles.scss'
-
 const FooterOrder = ({className}) => (
     <div className={className ? `${className} footer__order` : 'footer__order'}>
         <p className='mb-2 d-none d-sm-block'>Order</p>
