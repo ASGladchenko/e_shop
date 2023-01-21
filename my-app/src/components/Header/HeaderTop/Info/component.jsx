@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Nav, Modal, Form, Row, Col, Button } from 'react-bootstrap'
 import { BiUserCircle } from 'react-icons/bi'
 import './styles.scss'
@@ -7,69 +6,31 @@ import './styles.scss'
 function Info() {
   const [show, setShow] = useState(false)
 
-  const handeleClose = (show) => setShow(!show)
+  const handleSetShow = () => setShow(!show)
 
-  const handleShow = () => setShow(true)
-
-  const navigate = useNavigate()
-  const lngNavigate = (path) => navigate(path, { replace: true })
   return (
     <>
-      {/*  <div className="container ">
-        <div className="row">
-          <div className="col">
-            <button>UK</button>|<button>ru</button>
-          </div>
-          <div className="col">
-            <p>Нас. пункт</p>
-            <button>Київ</button>
-          </div>
-          <div className="col">
-            <BiUserCircle className={s.logo} />
-            <p>Увійдіть в особистий кабінет</p>
-          </div>
-        </div>
-      </div> */}
       <Row>
         <Col className="info justify-content-center ">
           <Nav className="d-flex align-items-center h-100">
             <div className="language ">
-              <span
-                className="text-uppercase"
-                onClick={(e) => {
-                  e.target.classList.toggle('fw-bold')
-                  let x = e.target.innerHTML
-                  lngNavigate(`/${x}`)
-                }}
-              >
-                uk
-              </span>
+              <span className="text-uppercase">uk</span>
               <span className="px-1">|</span>
-              <span
-                className="text-uppercase"
-                onClick={(e) => {
-                  e.target.classList.toggle('fw-bold')
-                  let x = e.target.innerHTML
-                  lngNavigate(`/${x}`)
-                }}
-              >
-                ru
-              </span>
+              <span className="text-uppercase">ru</span>
             </div>
             <div className="language">
               Нас. пукт
               <span className="ms-2 open-region-switch">Київ </span>
             </div>
             <Button
-              variant="success"
-              onClick={handleShow}
-              className="d-flex p-0 align-items-center"
+              onClick={handleSetShow}
+              className="d-flex p-0 align-items-center bg-second border-0"
             >
               <BiUserCircle className="logo" />
               <p className="m-0 font-size-10">Увійдіть в особистий кабінет</p>
             </Button>
           </Nav>
-          <Modal show={show} onHide={handeleClose}>
+          <Modal show={show} onHide={handleSetShow}>
             <Modal.Header closeButton>
               <Modal.Title>Log in</Modal.Title>
             </Modal.Header>

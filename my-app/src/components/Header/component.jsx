@@ -1,13 +1,13 @@
-import HeaderFooter from './HeaderBottom/component'
-import HeaderHeader from './HeaderHeader/component'
+import HeaderBottom from './HeaderBottom/component'
+import HeaderTop from './HeaderTop/component'
 
 import './styles.scss'
 
 const Header = () => {
   return (
     <>
-      <HeaderHeader />
-      <HeaderFooter />
+      <HeaderTop />
+      <HeaderBottom />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuB from './Burger2/component'
 
-const BurgerTest = () => {
+const HeaderTop = () => {
   return (
     <>
       <MenuB />
@@ -9,4 +9,4 @@ const BurgerTest = () => {
   )
 }
 
-export default BurgerTest
+export default HeaderTop

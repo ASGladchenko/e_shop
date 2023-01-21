@@ -6,16 +6,16 @@ import Navbar from 'react-bootstrap/Navbar'
 import Info from '../Info/component'
 
 import './styles.scss'
-
+import '../../../../shared/styles/main.scss'
 function MenuB() {
   return (
     <>
-      <div className="bg-success">
+      <div className="bg-second">
         <Container>
           <Row className="h-100">
             <Col className="col-xl-6  ">
               {[false].map((expand) => (
-                <Navbar bg="success" expand="xl">
+                <Navbar expand="xl">
                   {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Offcanvas
@@ -23,13 +23,13 @@ function MenuB() {
                     aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                     placement="start"
                   >
-                    <Nav className="navMenu text-white">
-                      <Nav.Link href="#delivery">Доставка та оплата</Nav.Link>
+                    <Nav className="navMenu ">
+                      {/* <Nav.Link href="#delivery">Доставка та оплата</Nav.Link>
                       <Nav.Link href="#partner">Партнерам HoReCa</Nav.Link>
                       <Nav.Link href="#blog">Блог</Nav.Link>
                       <Nav.Link href="#company">Про компанію</Nav.Link>
                       <Nav.Link href="#contact">Контакти</Nav.Link>
-                      <Nav.Link href="#promotions">Акції</Nav.Link>
+                      <Nav.Link href="#promotions">Акції</Nav.Link> */}
                     </Nav>
                   </Navbar.Offcanvas>
                 </Navbar>

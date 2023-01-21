@@ -1,6 +1,6 @@
 import './styles.scss'
 
-const HeaderFooter = () => {
+const HeaderBottom = () => {
   return <></>
 }
-export default HeaderFooter
+export default HeaderBottom
